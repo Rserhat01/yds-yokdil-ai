@@ -6,16 +6,17 @@ from utils.vocab_tracker import update_vocab_list, show_vocab_list
 import json
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
+
+# ✨ Tema stili yükleniyor
 st.markdown("<style>" + open("assets/dark_theme.css").read() + "</style>", unsafe_allow_html=True)
 
-
-# Dark theme ayarı (Streamlit ayarlarında ayrıca tema seçilecek)
+# Streamlit sayfa yapılandırması
 st.set_page_config(page_title="YDS/YÖKDİL AI Eğitmen", layout="centered")
 
-# 📊 Kullanım istatistikleri dosyası
+# 📊 İstatistik dosyası tanımı
 stats_path = "data/stats.json"
-# Dosya yoksa veya boşsa baştan yaz
 if not os.path.exists(stats_path) or os.path.getsize(stats_path) == 0:
     with open(stats_path, "w") as f:
         json.dump({"total_questions": 0}, f)
@@ -50,7 +51,7 @@ if uploaded_file:
         else:
             st.error("❌ Görselden metin çıkarılamadı. Daha net bir fotoğraf yükleyin.")
 
-# 📈 İstatistik Paneli
+# 📊 İstatistik Paneli
 with open(stats_path, "r") as f:
     stats = json.load(f)
 
@@ -59,5 +60,5 @@ with st.expander("📊 İstatistiklerim"):
     st.caption("İlerlemen otomatik kaydediliyor.")
 
 # 📚 Kelime Defteri
-with st.expander("📖 Kelime Defteri"):
+with st.expander("📚 Kelime Defteri"):
     show_vocab_list()
