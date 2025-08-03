@@ -1,7 +1,7 @@
-streamlit>=1.30
+streamlit
 openai>=1.3.7
-easyocr
-torch
-numpy
+python-dotenv
 Pillow
+numpy
+easyocr
 googletrans==4.0.0-rc1
