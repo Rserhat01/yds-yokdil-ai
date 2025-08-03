@@ -1,0 +1,41 @@
+# Python derleme dosyaları
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ortam dosyaları
+.env.example
+.env.*
+!.env.example
+
+# Streamlit cache ve ayar dosyaları
+.streamlit/
+
+# Jupyter / Colab
+.ipynb_checkpoints/
+
+# Çıkış dosyaları
+*.log
+*.csv
+*.xlsx
+*.db
+*.sqlite3
+
+# IDE / Editör dosyaları
+.vscode/
+.idea/
+*.swp
+
+# Model çıktıları ve büyük dosyalar
+checkpoints/
+models/
+outputs/
+
+# Geçici dosyalar
+*.tmp
+*.bak
+*.~
+.DS_Store
+
+# PyCharm özel (ek)
+*.iml
