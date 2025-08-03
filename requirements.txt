@@ -1,7 +1,6 @@
 streamlit
 openai>=1.0.0
-python-dotenv
 easyocr
 pillow
 numpy
-googletrans==4.0.0rc1
+googletrans==3.1.0a0
